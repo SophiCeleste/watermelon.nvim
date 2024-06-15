@@ -1,6 +1,6 @@
 local I = {}
 
-I.styles_list = { 'dark' }
+I.styles_list = { 'dark', 'light' }
 
 ---Change watermelon option (vim.g.watermelon_config.option)
 ---It can't be changed directly by modifying thit field due to a Neovim lua bug with global variables (watermelon_config is a global variable)
