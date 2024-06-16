@@ -141,7 +141,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@character"] = hl.syntax.Character,
         ["@comment"] = hl.syntax.Comment,
         ["@comment.todo"] = hl.syntax.Todo,
-        ["@comment.todo.unchecked"] = {fg = c.blue fmt = cfg.code_style.comments},
+        ["@comment.todo.unchecked"] = {fg = c.blue, fmt = cfg.code_style.comments},
         ["@comment.todo.checked"] = {fg = c.limegreen, fmt = cfg.code_style.comments},
         ["@constant"] = hl.syntax.Constant,
         ["@constant.builtin"] = hl.syntax.Constant,
@@ -238,8 +238,8 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@text.literal"] = hl.syntax.Regex,
         ["@text.uri"] = c.darkpink,
         ["@text.todo"] = hl.syntax.Todo,
-        ["@text.todo.unchecked"] = {fg = c.blue fmt = cfg.code_style.comments},
-        ["@text.todo.checked"] = {fg = c.blue fmt = cfg.code_style.comments},
+        ["@text.todo.unchecked"] = {fg = c.blue, fmt = cfg.code_style.comments},
+        ["@text.todo.checked"] = {fg = c.blue, fmt = cfg.code_style.comments},
         ["@text.math"] = c.blue,
         ["@text.reference"] = hl.syntax.Parameter,
         ["@text.environment"] = hl.common.Normal,
@@ -604,11 +604,11 @@ local lsp_kind_icons_color = {
 
 function H.setup()
     -- define cmp and aerial kind highlights with lsp_kind_icons_color
-    for kind, color in pairs(lsp_kind_icons_color) do
-        hl.plugins.cmp["CmpItemKind" .. kind] = { fg = color, fmt = cfg.cmp_itemkind_reverse and "reverse" }
-        hl.plugins.outline["Aerial" .. kind .. "Icon"] = { fg = color }
-        hl.plugins.navic["NavicIcons" .. kind] = { fg = color }
-    end
+    -- for kind, color in pairs(lsp_kind_icons_color) do
+    --     hl.plugins.cmp["CmpItemKind" .. kind] = { fg = color, fmt = cfg.cmp_itemkind_reverse and "reverse" }
+    --     hl.plugins.outline["Aerial" .. kind .. "Icon"] = { fg = color }
+    --     hl.plugins.navic["NavicIcons" .. kind] = { fg = color }
+    -- end
 
     vim_highlights(hl.common)
     vim_highlights(hl.syntax)
