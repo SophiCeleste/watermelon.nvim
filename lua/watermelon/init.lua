@@ -47,18 +47,22 @@ local default_config = {
     toggle_style_key = nil,
     toggle_style_list = I.styles_list,
     transparent = true,             -- set to false to turn off the transparent background
-    term_colors = true,             -- enabler the terminal colors
+    term_colors = true,             -- enable the terminal colors
     ending_tildes = false,          -- show / hide the end-of-buffer tildes
     cmp_itemkind_reverse = false,   -- reverse the item kind highlights in the cmp menu
 
     -- Changing Formats --
     code_style = {
-        comments = 'italic',
-        constants = 'bold',
-        functions = 'none',
-        keywords = 'none',
-        strings = 'none',
-        variables = 'none'
+          bool = 'bold',
+          comments = 'italic',
+          constants = 'bold',
+          error = 'bold',
+          functions = 'bold',
+          keywords = 'none',
+          preproc = 'bold',
+          strings = 'none',
+          title = 'bold',
+          variables = 'none'
     },
 
     -- Lualine options --
