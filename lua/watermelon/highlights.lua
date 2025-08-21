@@ -211,14 +211,12 @@ hl.syntax = {
 
 hl.syntax = {
     Annotation          = { fg = c.yellow },
-    Attritbute          = { fg = c.darkgreen },
     Attritbute          = { fg = c.limegreen },
     Boolean             = { fg = c.lightblue, fmt = cfg.code_style.bool }, --add code style bool
     Bracket             = { fg = c.limegreen },
     Character           = { fg = c.pink },
     Comment             = { fg = c.fg2, fmt = cfg.code_style.comments },
     Conditional         = { fg = c.red },
-    Constant            = { fg = c.lightblue },
     Constant            = { fg = c.green },
     Define              = { fg = c.yellow, fmt = cfg.code_style.preproc },
     Delimiter           = { fg = c.fg0 },
@@ -237,12 +235,10 @@ hl.syntax = {
     Namespace           = { fg = c.yellow },
     Number              = { fg = c.blue },
     Operator            = { fg = c.white },
-    Parameter           = { fg = c.green },
     Parameter           = { fg = c.green, fmt = 'italic' },
     PreCondit           = { fg = c.yellow, fmt = cfg.code_style.preproc },
     PreProc             = { fg = c.yellow, fmt = cfg.code_style.preproc },
     Property            = { fg = c.white },
-    Regex               = { fg = c.limegreen },
     Regex               = { fg = c.yellow },
     Repeat              = { fg = c.red },
     Special             = { fg = c.lightblue },
@@ -872,7 +868,6 @@ hl.langs.javascript = {
     ["@variable.member.javascript"]      = { fg = c.white, fmt = "bold" },
     ["@variable.parameter.javascript"]   = { fg = c.limegreen, fmt = "bold" },
 hl.langs.javascript = {
-    ["@keyword.coroutine"]              = { fg = c.limegreen },
     ["@operator.javascript"]            = { fg = c.darkpink },
     -- ["@method.javascript"]              = { fg = c.green },
     ["@keyword.function.javascript"]    = { fg = c.darkgreen },
