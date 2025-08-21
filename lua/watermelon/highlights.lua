@@ -93,12 +93,14 @@ hl.common = {
 hl.syntax = {
     Annotation          = { fg = c.yellow },
     Attritbute          = { fg = c.darkgreen },
+    Attritbute          = { fg = c.limegreen },
     Boolean             = { fg = c.lightblue, fmt = cfg.code_style.bool }, --add code style bool
     Bracket             = { fg = c.limegreen },
     Character           = { fg = c.pink },
     Comment             = { fg = c.fg2, fmt = cfg.code_style.comments },
     Conditional         = { fg = c.red },
     Constant            = { fg = c.lightblue },
+    Constant            = { fg = c.green },
     Define              = { fg = c.yellow, fmt = cfg.code_style.preproc },
     Delimiter           = { fg = c.fg0 },
     Error               = { fg = c.err, fmt = cfg.code_style.error },
@@ -117,10 +119,12 @@ hl.syntax = {
     Number              = { fg = c.blue },
     Operator            = { fg = c.white },
     Parameter           = { fg = c.green },
+    Parameter           = { fg = c.green, fmt = 'italic' },
     PreCondit           = { fg = c.yellow, fmt = cfg.code_style.preproc },
     PreProc             = { fg = c.yellow, fmt = cfg.code_style.preproc },
     Property            = { fg = c.white },
     Regex               = { fg = c.limegreen },
+    Regex               = { fg = c.yellow },
     Repeat              = { fg = c.red },
     Special             = { fg = c.lightblue },
     SpecialChar         = { fg = c.lightblue },
@@ -492,6 +496,9 @@ hl.plugins.indent_blankline = {
 --- LANGUAGE SPECIFIC HIGHLIGHTS 
 ----------------------------------------------------------------
 
+hl.langs.bash = {
+    dosbatchStatement = { fg = c.darkpink },
+}
 hl.langs.c = {
     -- cInclude = colors.Blue,
     -- cStorageClass = colors.Purple,
@@ -513,6 +520,11 @@ hl.langs.cpp = {
 
 hl.langs.javascript = {
     ["@keyword.coroutine"]              = { fg = c.limegreen },
+    ["@operator.javascript"]            = { fg = c.darkpink },
+    -- ["@method.javascript"]              = { fg = c.green },
+    ["@keyword.function.javascript"]    = { fg = c.darkgreen },
+    ["@function.javascript"]            = { fg = c.green },
+    ["@function.call.javascript"]       = { fg = c.green },
 }
 
 hl.langs.markdown = {
@@ -560,6 +572,42 @@ hl.langs.php = {
     -- phpSCKeyword = {fg = c.purple, fmt = cfg.code_style.keywords},
     -- phpFCKeyword = {fg = c.purple, fmt = cfg.code_style.keywords},
     -- phpRegion = colors.Blue
+}
+
+hl.langs.python = {
+
+    ["@keyword.python"]                 = { fg = c.red, fmt = 'bold' },
+    ["@keyword.import.python"]          = hl.syntax.Include,
+    ["@keyword.function.python"]        = { fg = c.red, fmt = 'italic' },
+    ["@keyword.operator.python"]        = { fg = c.red },
+    ["@keyword.conditional.python"]     = hl.syntax.Conditional,
+    ["@keyword.repeat.python"]          = hl.syntax.Repeat,
+    ["@keyword.return.python"]          = { fg = c.red, fmt = 'bold' },
+
+    ["@function.python"]                = hl.syntax.Function,
+    ["@function.call.python"]           = hl.syntax.Function,
+    ["@function.method.python"]         = hl.syntax.Method,
+    ["@function.method.call.python"]    = hl.syntax.Method,
+    ["@function.builtin.python"]        = { fg = c.darkgreen, fmt = 'bold' },
+
+    ["@attribute.python"]               = { fg = c.limegreen, fmt = 'italic' },
+    ["@variable.parameter.python"]      = hl.syntax.Parameter,
+    ["@variable.builtin.python"]        = { fg = c.yellow, fmt = 'italic' },
+    ["@constant.builtin.python"]        = hl.syntax.Constant,
+
+    ["@type.python"]                    = hl.syntax.Type,
+    ["@type.builtin.python"]            = { fg = c.lightblue, fmt = 'italic' },
+    ["@module.python"]                  = hl.syntax.Type,
+    ["@exception.python"]               = hl.syntax.Type,
+
+    ["@string.python"]                  = hl.syntax.String,
+    ["@string.escape.python"]           = { fg = c.darkpink, fmt = cfg.code_style.strings },
+    ["@string.special.python"]          = hl.syntax.Special,
+    ["@string.documentation.python"]    = hl.syntax.Comment,
+
+    ["@punctuation.bracket.python"]     = hl.syntax.Bracket,
+    ["@punctuation.delimiter.python"]   = hl.syntax.Delimiter,
+    ["@operator.python"]                = hl.syntax.Operator, 
 }
 
 hl.langs.vim = {
