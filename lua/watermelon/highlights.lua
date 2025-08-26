@@ -617,8 +617,9 @@ hl.langs.python = {
     ["@function.builtin.python"]      = { fg = c.darkgreen, fmt = 'bold' },
 
     ["@attribute.python"]             = { fg = c.limegreen, fmt = 'italic' },
-    ["@variable.parameter.python"]    = hl.syntax.Parameter,
     ["@variable.builtin.python"]      = { fg = c.yellow, fmt = 'italic' },
+    ["@variable.member.python"]       = { fg = c.green },
+    ["@variable.parameter.python"]    = hl.syntax.Parameter,
     ["@constant.builtin.python"]      = hl.syntax.Constant,
 
     ["@type.python"]                  = hl.syntax.Type,
